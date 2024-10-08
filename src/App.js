@@ -76,10 +76,10 @@ function App() {
   }
 
   const fetchPokemon = () => {
-    fetch('http://localhost:3001/pokemon')
+    fetch('https://pokemon-backend-ff60.onrender.com/pokemon')
         .then(response => {
           if (response) {
-            fetch('http://localhost:3001/image', {
+            fetch('https://pokemon-backend-ff60.onrender.com/image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
@@ -105,89 +105,6 @@ function App() {
             console.log('pokemon data set')
         }
   }
-  // const particlesOptions = {
-  //     background: {
-  //       color: {
-  //         value: "none"
-  //       }
-  //     },
-  //     fpsLimit: 120,
-  //     interactivity: {
-  //       events: {
-  //         onClick: {
-  //           enable: true,
-  //           mode: "push"
-  //         },
-  //         onHover: {
-  //           enable: true,
-  //           mode: "repulse"
-  //         },
-  //         resize: true
-  //       },
-  //       modes: {
-  //         push: {
-  //           quantity: 4
-  //         },
-  //         repulse: {
-  //           distance: 200,
-  //           duration: 0.4
-  //         }
-  //       }
-  //     },
-  //     particles: {
-  //       color: {
-  //         value: "#13E8E9"
-  //       },
-  //       links: {
-  //         color: "#13E8E9",
-  //         distance: 200,
-  //         enable: true,
-  //         opacity: 1.0,
-  //         width: 1
-  //       },
-  //       move: {
-  //         direction: "none",
-  //         enable: true,
-  //         outModes: {
-  //           default: "bounce"
-  //         },
-  //         random: false,
-  //         speed: 1.25,
-  //         straight: false
-  //       },
-  //       number: {
-  //         density: {
-  //           enable: true,
-  //           area: 800
-  //         },
-  //         value: 40
-  //       },
-  //       opacity: {
-  //         value: 0.5
-  //       },
-  //       shape: {
-  //         type: "circle"
-  //       },
-  //       size: {
-  //         value: { min: 1, max: 5 }
-  //       }
-  //     },
-  //     detectRetina: true
-  //   }
-
-  /*
-  const particlesOptions = {
-    particles: {
-      number: {
-        value: 30,
-        density: {
-          enable:true,
-          value_area: 800
-        }
-      }
-    }
-  }
-    */
 
   const particlesOptions = {
     fpsLimit: 120,
@@ -256,12 +173,6 @@ function App() {
   
   return (
     <div className="App">
-    {/*<Particles
-    id="tsparticles"
-    init={particlesInit}
-    loaded={particlesLoaded}
-    options={particlesOptions}
-    />*/}
      { init && <Particles
             id="tsparticles"
             particlesLoaded={particlesLoaded}

@@ -15,7 +15,7 @@ function Register({onRouteChange, loadUser}) {
         setPassword(event.target.value)
     }
     const onSubmitChange = () => {
-        fetch('http://localhost:3001/register', {
+        fetch('https://pokemon-backend-ff60.onrender.com/register', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
