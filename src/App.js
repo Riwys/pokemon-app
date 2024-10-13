@@ -69,6 +69,7 @@ function App() {
   const onRouteChange = (routeValue) => {
     if (routeValue === 'signout') {
       setIsSignedIn(false)
+      setPokemonData([])
     } else if (routeValue === 'home') {
       setIsSignedIn(true)
     }
