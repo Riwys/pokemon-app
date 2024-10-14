@@ -51,6 +51,7 @@ function App() {
                         
   const particlesLoaded = (container) => {
     console.log(container);
+    console.log(pokemonData);
   };
 
   const loadUser = (data) => {
@@ -69,7 +70,7 @@ function App() {
   const onRouteChange = (routeValue) => {
     if (routeValue === 'signout') {
       setIsSignedIn(false)
-      setPokemonData([])
+      setPokemonReceived(false);
     } else if (routeValue === 'home') {
       setIsSignedIn(true)
     }
