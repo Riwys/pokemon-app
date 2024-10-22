@@ -1,3 +1,5 @@
 .tilt {
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    background: #ffb347;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffcc33, #ffb347); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
