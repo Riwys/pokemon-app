@@ -26,6 +26,11 @@ function SignIn({ onRouteChange, loadUser }) {
                 }
             })
     }
+    const checkEnterPressed = (event) => {
+        if (event.keyCode || event.which === 13) {
+            onSubmitChange();
+        }
+    }
     return (
         <article className="br2 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 center shadow-5">
         <main className="pa4 black-80">
@@ -50,6 +55,7 @@ function SignIn({ onRouteChange, loadUser }) {
         name="password"  
         id="password" 
         onChange={onPasswordChange}
+        onKeyUp={checkEnterPressed}
         />
         </div>
         </fieldset>
