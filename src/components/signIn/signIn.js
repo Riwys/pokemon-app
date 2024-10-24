@@ -27,7 +27,7 @@ function SignIn({ onRouteChange, loadUser }) {
             })
     }
     const checkEnterPressed = (event) => {
-        if (event.keyCode || event.which === 13) {
+        if (event.keyCode === 13 || event.which === 13) {
             onSubmitChange();
         }
     }
