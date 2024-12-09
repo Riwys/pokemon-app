@@ -22,6 +22,7 @@ function App() {
                               emailId: '',
                               password: '',
                               entries: 0,
+                              pokemonStore: [],
                               joined: ''
                           })
 /*
@@ -81,7 +82,7 @@ function App() {
     fetch('https://pokemon-backend-ff60.onrender.com/pokemon')
         .then(response => {
           if (response) {
-            fetch('https://pokemon-backend-ff60.onrender.com/image', {
+            fetch('https://pokemon-backend-ff60.onrender.com/entry', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
@@ -102,6 +103,10 @@ function App() {
         .catch(err => console.log(err))
 
         function renderPokemon(pokeData) {
+            setUser({
+              ...user,
+              pokemonStore: pokeData
+            })
             setPokemonData(pokeData);
             setPokemonReceived(true);
             console.log('pokemon data set')

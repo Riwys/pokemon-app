@@ -72,7 +72,7 @@ function Register({onRouteChange, loadUser}) {
         name="password"  
         id="password" 
         onChange={onPasswordChange}
-        onKeyUp={checkEnterPressed}
+        onKeyUp={checkEnterPressed} 
         />
         </div>
         </fieldset>
