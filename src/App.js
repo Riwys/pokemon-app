@@ -55,14 +55,14 @@ function App() {
     console.log(pokemonData);
   };
 
-  const loadUser = (data) => {
-    console.log(data);
+  const loadUser = (userData) => {
+    console.log(userData);
     setUser({
-      id: data._id,
-      username: data.username,
-      emailId: data.emailId,
-      entries: data.entries,
-      joined: data.joined
+      id: userData._id,
+      username: userData.username,
+      emailId: userData.emailId,
+      entries: userData.entries,
+      joined: userData.joined
   })
   }
   
