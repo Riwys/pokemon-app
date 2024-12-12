@@ -38,6 +38,14 @@ function Register({onRouteChange, loadUser}) {
             console.log(event.keyCode, event.which)
         }
     }
+    const moveToNextInput = (event) => {
+        if (event.keyCode === 13 || event.which === 13) {
+            {let nextInput = document.getElementById("password");
+            nextInput.focus();
+            }
+            console.log(event.keyCode, event.which)
+        }
+    }
     return (
         <article className="br2 ba b--black-10 mv4 w-100 w-50-m w-25-l mw5 center shadow-5">
         <main className="pa4 black-80">
@@ -62,6 +70,7 @@ function Register({onRouteChange, loadUser}) {
         name="email-address"  
         id="email-address" 
         onChange={onEmailChange}
+        onKeyUp={moveToNextInput}
         />
         </div>
         <div className="mv3">

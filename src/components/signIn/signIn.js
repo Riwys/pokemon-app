@@ -20,7 +20,7 @@ function SignIn({ onRouteChange, loadUser }) {
         })
         .then(response => response.json())
             .then(user => {
-                if(user) {
+                if(user.name) {
                     loadUser(user)
                     onRouteChange('home');
                 }
@@ -29,6 +29,15 @@ function SignIn({ onRouteChange, loadUser }) {
     const checkEnterPressed = (event) => {
         if (event.keyCode === 13 || event.which === 13) {
             onSubmitChange();
+        }
+    }
+    const moveToNextInput = (event) => {
+        if (event.keyCode === 13 || event.which === 13) {
+            {let nextInput = document.getElementById("password");
+                console.log(nextInput);
+            nextInput.focus();
+            }
+            console.log(event.keyCode, event.which)
         }
     }
     return (
@@ -45,6 +54,7 @@ function SignIn({ onRouteChange, loadUser }) {
         name="email-address"  
         id="email-address" 
         onChange={onEmailChange}
+        onKeyUp={moveToNextInput}
         />
         </div>
         <div className="mv3">
