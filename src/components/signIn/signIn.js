@@ -20,7 +20,7 @@ function SignIn({ onRouteChange, loadUser }) {
         })
         .then(response => response.json())
             .then(user => {
-                if(user.name) {
+                if(user._id) {
                     loadUser(user)
                     onRouteChange('home');
                 }
