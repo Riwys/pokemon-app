@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { useCallback, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import Navigation from './components/navigation/navigation';
